@@ -1,0 +1,17 @@
+#app {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6px;
+}
+
+@media (max-width: 768px) {
+  #app {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    grid-column: 1 / -1;
+  }
+}
