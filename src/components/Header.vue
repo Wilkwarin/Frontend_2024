@@ -1,7 +1,7 @@
 <template>
-    <header>
+    <header class="menu">
       <nav>
-        <ul>
+        <ul class="nav-list">
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/gallery">Gallery</router-link></li>
           <li><router-link to="/blog">Blog</router-link></li>
@@ -10,7 +10,7 @@
         </ul>
       </nav>
     </header>
-  </template>
+</template>
   
   <script>
   export default {

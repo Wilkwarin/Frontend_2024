@@ -1,4 +1,5 @@
 <template>
+  <div>
     <form @submit.prevent="submitForm">
       <div>
         <label for="name">Name:</label>
@@ -10,22 +11,38 @@
       </div>
       <button type="submit">Submit</button>
     </form>
-  </template>
+    <div v-if="message" class="confirmation-message">
+      {{ message }}
+    </div>
+  </div>
+</template>
   
-  <script>
-  export default {
-    name: 'ContactForm',
-    data() {
-      return {
-        name: '',
-        email: '',
-      };
+<script>
+import { useContactStore } from "@/stores/contactForm";
+
+export default {
+  name: "ContactForm",
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    submitForm() {
+      const contactStore = useContactStore();
+      if (this.name && this.email) {
+        const submission = { name: this.name, email: this.email };
+        contactStore.addSubmission(submission);
+        this.message = `Thank you, ${this.name}! Your message has been submitted.`;
+        this.name = "";
+        this.email = "";
+      } else {
+        this.message = "Please fill out all fields.";
+      }
     },
-    methods: {
-      submitForm() {
-        console.log('Form submitted:', this.name, this.email);
-      },
-    },
-  };
-  </script>
+  },
+};
+</script>
   

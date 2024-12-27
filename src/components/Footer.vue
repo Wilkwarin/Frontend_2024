@@ -1,14 +1,25 @@
 <template>
     <footer class="site-footer">
-      <p>© 2024 My Cat Blog</p>
+      <h4>Copyright <br>
+        © 2024 Mariia Shorokhova</h4>
+      <div>
+      <h4>Contact Us</h4>
+      <ContactForm />
+      </div>
+      <div>
+        <h4>Call us</h4>
+        <p>Phone: +123456789</p>
+      </div>
     </footer>
   </template>
   
   <script>
+  import ContactForm from './ContactForm.vue';
+  
   export default {
     name: 'Footer',
-    mounted() {
-    console.log('Footer rendered');
-  }
+    components: {
+      ContactForm,
+    },
   };
   </script>

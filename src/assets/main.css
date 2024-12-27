@@ -1,9 +1,82 @@
 #app {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
   gap: 16px;
   width: 100%;
   margin: 0 auto;
   padding: 6px;
+}
+
+header {
+  grid-column: 1 / -1;
+  width: 100%;
+  background-color: #333;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.nav-list a:hover {
+  background-color: rgba(203, 131, 131, 0.671);
+}
+
+.careUl {
+  margin-left: 20px;
+}
+
+footer {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  height: 80vh;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 10%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.caru {
+  max-width: 600px;
+  max-height:450px;
+  width: auto;
+  height: auto;
 }
 
 @media (max-width: 768px) {

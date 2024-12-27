@@ -28,26 +28,7 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
-header {
-  grid-column: 1 / -1;
-  width: 100%;
-  background-color: blue;
-}
-
-footer {
-  grid-column: 1 / -1;
-  width: 100%;
-  background-color: blue;
-}
-
+<style scoped>
 .content {
   display: grid;
   grid-template-columns: 5fr 1fr;
