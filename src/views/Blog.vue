@@ -19,17 +19,15 @@ import PostCard from '@/components/PostCard.vue';
 export default {
   name: 'Blog',
   components: { PostCard },
+  data() {
+    return {
+      postStore: usePostStore(),
+    };
+  },
   computed: {
     posts() {
       return this.postStore.posts;
     },
-  },
-  created() {
-    console.log(this.posts);
-  },
-  setup() {
-    const postStore = usePostStore();
-    return { postStore };
   },
 };
 </script>

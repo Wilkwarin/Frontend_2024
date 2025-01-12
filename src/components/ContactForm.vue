@@ -34,8 +34,11 @@ export default {
       const contactStore = useContactStore();
       if (this.name && this.email) {
         const submission = { name: this.name, email: this.email };
-        contactStore.addSubmission(submission);
+        contactStore.addContactSubmission(submission);
+        console.log("Submission object:", submission);
         this.message = `Thank you, ${this.name}! Your message has been submitted.`;
+        console.log("Contact store:", contactStore);
+        console.log("Before submission:", this.name, this.email);
         this.name = "";
         this.email = "";
       } else {

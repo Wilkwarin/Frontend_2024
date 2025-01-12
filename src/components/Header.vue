@@ -15,8 +15,5 @@
   <script>
   export default {
     name: "Header",
-    mounted() {
-    console.log('Header rendered');
-  }
   };
   </script>
