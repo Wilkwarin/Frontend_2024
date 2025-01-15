@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { mapState } from 'pinia';
 import { usePostStore } from '@/stores/postStore';
 import PostCard from '@/components/PostCard.vue';
 
@@ -21,7 +20,14 @@ export default {
   name: 'CatStory',
   components: { PostCard },
   computed: {
-    ...mapState(usePostStore, ['story']),
+    story() {
+      return this.postStore.story;
+    },
+  },
+  data() {
+    return {
+      postStore: usePostStore(),
+    };
   },
 };
 </script>

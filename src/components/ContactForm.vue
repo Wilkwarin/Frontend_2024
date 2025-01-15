@@ -1,12 +1,12 @@
 <template>
   <div>
-    <form @submit.prevent="submitForm">
+    <form @submit.prevent="submitForm" class="custom-form">
       <div>
-        <label for="name">Name:</label>
+        <label for="name"> Name: </label>
         <input id="name" v-model="name" />
       </div>
       <div>
-        <label for="email">Email:</label>
+        <label for="email">E-mail:</label>
         <input id="email" v-model="email" />
       </div>
       <button type="submit">Submit</button>
@@ -33,9 +33,9 @@ export default {
     submitForm() {
       const contactStore = useContactStore();
       if (this.name && this.email) {
-        const submission = { name: this.name, email: this.email };
-        contactStore.addContactSubmission(submission);
-        this.message = `Thank you, ${this.name}! Your message has been submitted.`;
+        const kontakt = { name: this.name, email: this.email };
+        contactStore.addContactSubmission(kontakt);
+        this.message = `Thank you, ${this.name}!`;
         this.name = "";
         this.email = "";
       } else {

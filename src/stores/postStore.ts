@@ -17,14 +17,5 @@ export const usePostStore = defineStore('postStore', {
     addPost(post: { id: number; title: string; content: string }) {
       this.posts.push(post);
     },
-    deletePost(id: number) {
-      this.posts = this.posts.filter((post) => post.id !== id);
-    },
-    updatePost(updatedPost: { id: number; title: string; content: string }) {
-      const index = this.posts.findIndex((post) => post.id === updatedPost.id);
-      if (index !== -1) {
-        this.posts[index] = updatedPost;
-      }
-    },
   },
 });

@@ -79,6 +79,101 @@ footer {
   height: auto;
 }
 
+/* new post */
+
+form:not(.custom-form) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 16px;
+  max-width: calc(100% - 15px);
+  background-color: rgba(203, 131, 131, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(203, 131, 131, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-list + form {
+  margin-left: 20px;
+}
+
+form:not(.custom-form) label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+form:not(.custom-form) input[type="text"],
+form:not(.custom-form) textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid rgba(203, 131, 131, 0.5);
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  color: #333;
+}
+
+form:not(.custom-form) input[type="text"]:focus,
+form:not(.custom-form) textarea:focus {
+  outline: none;
+  border-color: rgba(203, 131, 131, 0.8);
+  box-shadow: 0 0 4px rgba(203, 131, 131, 0.5);
+}
+
+form:not(.custom-form) textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+
+form:not(.custom-form) button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(199, 110, 125);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: rgb(199, 110, 125);
+}
+
+/* post card*/
+
+.post-card {
+  margin:  20px 0;
+  padding: 16px;
+  max-width: calc(100% - 15px);
+  background-color: rgba(203, 131, 131, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(203, 131, 131, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background-color: rgb(206, 129, 142);
+  border-radius: 4px;
+}
+
+.post-card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+h1, h2, h4, p, .custom-form {
+  margin-left: 20px;
+}
+
 @media (max-width: 768px) {
   #app {
     grid-template-columns: 1fr;

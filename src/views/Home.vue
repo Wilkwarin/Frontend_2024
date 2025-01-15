@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Home</h1>
-    <p>Welcome to the homepage!</p>
+    <p>Ak chcete kontaktovať nás, zanechajte svoje meno a e-mail:</p>
     <ContactForm />
   </div>
 </template>

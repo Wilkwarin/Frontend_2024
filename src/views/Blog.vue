@@ -4,25 +4,25 @@
 
     <form @submit.prevent="handleSubmit">
       <div>
-        <label for="title">Заголовок:</label>
+        <label for="title">Title:</label>
         <input
           id="title"
           v-model="newPost.title"
           type="text"
-          placeholder="Введите заголовок"
+          placeholder="title..."
           required
         />
       </div>
       <div>
-        <label for="content">Содержание:</label>
+        <label for="content">Content:</label>
         <textarea
           id="content"
           v-model="newPost.content"
-          placeholder="Введите содержание"
+          placeholder="content..."
           required
         ></textarea>
       </div>
-      <button type="submit">Добавить статью</button>
+      <button type="submit">Add post</button>
     </form>
 
     <div class="post-list">
@@ -33,6 +33,7 @@
         :content="post.content"
       />
     </div>
+    
   </div>
 </template>
 

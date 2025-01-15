@@ -3,8 +3,13 @@
     <h1>Gallery</h1>
     <section class="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item" v-for="(item, index) in carouselItems" :key="index">
-          <img class="caru" :src="`/src/images/${item.image}`" :alt="item.alt" />
+
+        <div class="carousel-item" v-for="item in carouselItems" :key="item.id">
+          <img 
+            class="caru" 
+            :src="'/src/images/' + item.image" 
+            :alt="item.alt" 
+          />
         </div>
       </div>
     </section>
